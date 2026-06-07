@@ -58,18 +58,19 @@ An analysis of the operational reality of a Paris luxury boutique revealed three
 
 ### 2. Problem Statement
 
-> Brand knowledge and performance data remain fragmented, leaving teams without a unified view to guide them
-> and real-time support to turn context into confident, personalized interactions.
-> Beyond operations, the absence of predictive modeling means missed opportunities in clienteling,
-> inventory planning, and collection strategy.
-> The goal: empower every persona with the right information at the right moment — and give decision-makers
-> the predictive tools to act before the data becomes history.
+> In luxury retail, there is no room for hesitation. An advisor who fumbles on a gemstone detail, misquotes a warranty, or fails to recall a client's last purchase doesn't just lose a sale, they damage the brand.
+
+>Yet collections change constantly, client profiles multiply, and policies evolve. Advisors are expected to know everything, instantly, with no cheat sheet allowed.
+
+>Behind the scenes, office teams face the opposite problem: too much data, not enough signal. Sales figures sit in spreadsheets, client insights stay locked in advisors' heads, and decisions get made on instinct rather than evidence.
+
+>The goal: give every persona the right information at the right moment, and replace instinct with intelligence.
 
 ### 3. Product Vision
 
 #### The brand as a design constraint
 
-LÉIA was designed from scratch as the fictional company this project is built around — its brand DNA directly shaped every product decision.
+LÉIA was designed from scratch as the fictional company this project is built around. Its brand DNA directly shaped every product decision.
 
 Founded in 2013, the year France legalized marriage equality, LÉIA was built around one core idea: **jewelry as emancipation, as a mirror of identity**.
 
@@ -248,7 +249,7 @@ A predictive intelligence layer built on top of the Paris boutique dataset.
 
 ### Why ML and not just RAG?
 
-The RAG chatbot retrieves what it knows. The ML suite learns patterns from data and predicts what it doesn't yet know — client behavior, future purchases, seasonal trends.
+The RAG chatbot retrieves what it knows. The ML suite learns patterns from data and predicts what it doesn't yet know: client behavior, future purchases, seasonal trends.
 
 | Capability | RAG | ML |
 |-----------|-----|-----|
@@ -425,7 +426,7 @@ seaborn
 
 ## Why this project / About me
 
-I built this project to demonstrate product thinking applied to AI tooling — from problem identification to technical implementation — and my ability to connect machine learning capabilities with real business needs in luxury retail.
+I built this project to demonstrate product thinking applied to AI tooling, from problem identification to technical implementation, and my ability to connect machine learning capabilities with real business needs in luxury retail.
 
 Fascinated by new technologies and AI, I bring a hybrid background in law and business, enriched by roles across account management, partnerships, marketing, and operations in tech organizations from startups to multinationals.
 
