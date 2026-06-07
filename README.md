@@ -17,7 +17,12 @@ AI-powered intelligence suite for a luxury jewelry maison — RAG chatbot, analy
 
 ## Context
 
-LÉIA is a fictional Parisian high jewelry and Swiss watchmaking house. This project simulates the AI tools a Product Manager might design for a luxury retail company — starting with a RAG-powered knowledge assistant and an analytics dashboard, then extending into machine learning for client segmentation, piece recommendation, and sales trend prediction.
+LÉIA is a fictional Parisian luxury jewelry maison. 
+This project asks one question: what if every team in a high-end boutique had an AI built exactly for them?
+
+A chatbot that helps advisors know their clients, anticipate their needs, and deliver the right answer 
+at the right moment. A dashboard that turns sales data into decisions. And a machine learning layer that 
+predicts what clients want before they walk through the door.
 
 The Paris boutique was chosen deliberately: Paris is the reference market for luxury jewelry globally, and its international clientele — 28% Asian, 22% French, 18% Middle Eastern, 16% American — mirrors the complexity of real luxury retail operations.
 
