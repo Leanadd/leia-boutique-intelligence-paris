@@ -1,8 +1,8 @@
 # LÉIA Intelligence Suite — Paris Boutique
 
-AI-powered intelligence suite for a luxury jewelry maison — RAG chatbot, analytics dashboard & ML prediction models
+AI-powered intelligence suite for a luxury jewelry maison: RAG chatbot, analytics dashboard & ML prediction models
 
-> **Luxury retail meets artificial intelligence** — A product case study simulating AI-powered internal tools for a Parisian high jewelry maison.
+> **Luxury retail meets artificial intelligence**
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?logo=streamlit&logoColor=white)
@@ -10,8 +10,6 @@ AI-powered intelligence suite for a luxury jewelry maison — RAG chatbot, analy
 ![RAG](https://img.shields.io/badge/Architecture-RAG-green)
 ![ML](https://img.shields.io/badge/ML-scikit--learn%20%7C%20XGBoost-orange)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-orange)
-
-> 📌 This project is the evolution of [leia-boutique-intelligence](https://github.com/Leanadd/leia-boutique-intelligence) — focused on Paris boutique and extended with a Machine Learning layer.
 
 ---
 
@@ -24,7 +22,7 @@ A chatbot that helps advisors know their clients, anticipate their needs, and de
 at the right moment. A dashboard that turns sales data into decisions. And a machine learning layer that 
 predicts what clients want before they walk through the door.
 
-The Paris boutique was chosen deliberately: Paris is the reference market for luxury jewelry globally, and its international clientele — 28% Asian, 22% French, 18% Middle Eastern, 16% American — mirrors the complexity of real luxury retail operations.
+The Paris boutique was chosen deliberately: Paris is the reference market for luxury jewelry globally, and its international clientele, 28% Asian, 22% French, 18% Middle Eastern, 16% American, mirrors the complexity of real luxury retail operations.
 
 Three tools were designed and built:
 - A **multi-persona RAG chatbot** giving every team instant access to brand knowledge and client insights
@@ -42,7 +40,7 @@ Three tools were designed and built:
 An analysis of the operational reality of a Paris luxury boutique revealed three main friction points:
 
 **For field teams (boutique advisors, after-sales):**
-- No instant access to product knowledge, brand storytelling, or policies during client interactions — information scattered across PDFs, emails, training decks, and intranets
+- No instant access to product knowledge, brand storytelling, or policies during client interactions: information scattered across PDFs, emails, training decks, and intranets
 - Training provided at onboarding and updated only at each new collection release, leaving gaps in between
 - The real bottleneck: advisors have context but no support to turn it into a confident, personalized interaction at the right moment
 
@@ -53,7 +51,7 @@ An analysis of the operational reality of a Paris luxury boutique revealed three
 
 **For the organization:**
 - Inconsistent brand messaging with no guarantee that DNA is conveyed accurately at every touchpoint
-- Knowledge gaps are invisible — a wrong answer on warranty, materials, or policy is a brand trust failure
+- Knowledge gaps are invisible: a wrong answer on warranty, materials, or policy is a brand trust failure
 - No predictive capability: teams react to trends rather than anticipate them
 
 ### 2. Problem Statement
@@ -70,18 +68,16 @@ An analysis of the operational reality of a Paris luxury boutique revealed three
 
 #### The brand as a design constraint
 
-LÉIA was designed from scratch as the fictional company this project is built around. Its brand DNA directly shaped every product decision.
-
 Founded in 2013, the year France legalized marriage equality, LÉIA was built around one core idea: **jewelry as emancipation, as a mirror of identity**.
 
 The maison expresses this vision through four collections:
 
 | Collection | Philosophy |
 |-----------|------------|
-| **Amazon** | Unapologetic feminine power — bold, visible, commanding |
-| **Hatching** | Quiet strength — delicate but unbreakable, soft yet architectural |
-| **Eclipse** | Beyond definition — designed for non-binary and gender-fluid individuals |
-| **Vanta** | Tech minimalism — time reimagined, function without decoration |
+| **Amazon** | Unapologetic feminine power: bold, visible, commanding |
+| **Hatching** | Quiet strength: delicate but unbreakable, soft yet architectural |
+| **Eclipse** | Beyond definition: designed for non-binary and gender-fluid individuals |
+| **Vanta** | Tech minimalism: time reimagined, function without decoration |
 
 > *"At LÉIA, femininity is vast. Powerful with Amazon. Poetic with Hatching. Boundless with Eclipse."*
 
@@ -115,17 +111,17 @@ Eight documents structured into a queryable knowledge base:
 | `after_sales_policy.txt` | Warranty, repairs, returns, trade-in program |
 | `care_instructions.txt` | Material-specific care by metal, stone, and product type |
 | `boutique_innovation.txt` | Two original phygital retail concepts |
-| `leia_products.csv` | 42 products — materials, prices, gemstones, craftsmanship |
-| `purchase_history_3500.csv` | 3,508 transactions — Paris boutique |
-| `client_profiles_500.csv` | 500 clients — VIP tiers, preferences, purchase history, birthdate |
+| `leia_products.csv` | 42 products: materials, prices, gemstones, craftsmanship |
+| `purchase_history_3500.csv` | 3,508 transactions: Paris boutique |
+| `client_profiles_500.csv` | 500 clients: VIP tiers, preferences, purchase history, birthdate |
 
 **`boutique_innovation.txt`** documents two original phygital concepts:
-- **Chrysalis Room** — a private in-store space with programmable environment (lighting, scent, sound) and an encrypted digital memory capsule tied to each purchase
-- **Constellation Wall** — a touchscreen installation displaying real client stories, filterable by collection, theme, and occasion
+- **Chrysalis Room** a private in-store space with programmable environment (lighting, scent, sound) and an encrypted digital memory capsule tied to each purchase
+- **Constellation Wall** a touchscreen installation displaying real client stories, filterable by collection, theme, and occasion
 
 ### 4. OKRs
 
-**Objective 1 — Empower field and office teams with instant, reliable access to brand knowledge**
+**Objective 1 — Empower field and office teams with instant access to brand knowledge**
 
 | Key Result | Target |
 |-----------|--------|
@@ -152,15 +148,13 @@ Eight documents structured into a queryable knowledge base:
 
 ### 5. The Product Response
 
-Three complementary tools designed to address identified needs at every level — operational, analytical, and predictive.
+Three complementary tools designed to address identified needs at every level: operational, analytical, and predictive.
 
 | Tool | What it solves | For whom |
 |------|---------------|----------|
 | 🤖 **RAG Chatbot** | Instant access to brand knowledge, adapted by role; turns client data into personalized outreach in seconds | Boutique advisors, CRM, after-sales, marketing, product teams |
 | 📊 **Analytics Dashboard** | Unified view of sales, clients, and collection performance | Boutique managers, CRM team |
-| 🧠 **ML Suite** | Client segmentation, piece recommendation, sales trend prediction | CRM team, marketing, product development |
-
-Together they create a **single intelligence platform** where knowledge, performance data, and predictive models reinforce each other.
+| 🧠 **ML Suite** | Client segmentation, piece recommendation, sales trend prediction | Boutique advisors, CRM team, marketing, product development |
 
 ---
 
@@ -170,7 +164,7 @@ A knowledge base assistant grounded in LÉIA's internal documents and client dat
 
 ### What makes it different from a generic chatbot
 
-The same question gets a **different answer depending on who is asking** — because a boutique advisor needs a fast 3-line answer during a client interaction, while a marketing manager needs the full brand narrative.
+The same question gets a **different answer depending on who is asking** because a boutique advisor needs a fast 3-line answer during a client interaction, while a marketing manager needs the full brand narrative.
 
 **5 personas, 5 response styles:**
 
@@ -186,10 +180,10 @@ The same question gets a **different answer depending on who is asking** — bec
 
 | Question type | Example | Response |
 |--------------|---------|----------|
-| Product info | "Materials of the Möbius Ring?" | Bullet points — metal, stone, price, key feature |
+| Product info | "Materials of the Möbius Ring?" | Bullet points: metal, stone, price, key feature |
 | Client outreach | "Noura arrives tomorrow, how do I prepare?" | Profile summary + birthday flag + product suggestion |
 
-> The RAG is intentionally scoped: it retrieves and generates — it does not predict.
+> The RAG is intentionally scoped: it retrieves and generates, it does not predict.
 > Churn scoring, LTV prediction, and next-purchase modeling are handled by the ML suite.
 
 ### Architecture
@@ -225,13 +219,13 @@ An interactive business intelligence dashboard for the Paris boutique.
 
 ### Key views
 
-- **Revenue by collection** — which collections drive the most revenue
-- **VIP tier distribution** — Member / Gold / Platinum / Diamond breakdown
-- **Top 5 best-selling products** — by sales volume and collection
-- **Purchases over time** — monthly trend line
-- **Top clients by spending** — ranked table with preferences
-- **Advisor performance** — sales count, revenue, average transaction
-- **Collection insights** — avg price and product count per collection
+- **Revenue by collection** which collections drive the most revenue
+- **VIP tier distribution** Member / Gold / Platinum / Diamond breakdown
+- **Top 5 best-selling products** by sales volume and collection
+- **Purchases over time** monthly trend line
+- **Top clients by spending** ranked table with preferences
+- **Advisor performance** sales count, revenue, average transaction
+- **Collection insights** avg price and product count per collection
 
 ### Filters
 All views are filterable by: **VIP Tier** · **Collection** · **Date range**
@@ -301,7 +295,7 @@ Why    : Designed for business time series, handles seasonality
 ```
 
 ### Stack
-- **Segmentation:** `scikit-learn` — KMeans, StandardScaler, PCA
+- **Segmentation:** `scikit-learn` KMeans, StandardScaler, PCA
 - **Recommendation:** `scikit-learn` + `xgboost`
 - **Time series:** `prophet`
 - **EDA:** `pandas`, `matplotlib`, `seaborn`
@@ -407,16 +401,20 @@ seaborn
 
 ## 🔭 What's next
 
+**Go mobile first**
+- [ ] **Mobile deployment** : package the chatbot into a cross‑platform app (React Native / Flutter) so advisors can access it directly on iOS & Android
+- [ ] **Push notifications** : alert advisors with client insights or ML scores in real time
+
 **Improve the RAG**
-- [ ] **Conversation memory** — persist context within a session
-- [ ] **Feedback loop** — advisors rate answers (👍/👎) to improve retrieval over time
-- [ ] **Knowledge gap tracking** — analyze query patterns to identify missing information
-- [ ] **Multi-language support** — French, English, Mandarin
+- [ ] **Conversation memory**: persist context within a session
+- [ ] **Feedback loop** : advisors rate answers (👍/👎) to improve retrieval over time
+- [ ] **Knowledge gap tracking** : analyze query patterns to identify missing information
+- [ ] **Multi-language support** : French, English, Mandarin
 
 **Extend the ML suite**
-- [ ] **Churn prediction** — flag clients with no purchase in 12+ months and score reactivation potential
-- [ ] **LTV scoring** — predict lifetime value per client segment
-- [ ] **NLP trend detection** — sentiment analysis on luxury press and social media to anticipate collection directions
+- [ ] **Churn prediction** : flag clients with no purchase in 12+ months and score reactivation potential
+- [ ] **LTV scoring** : predict lifetime value per client segment
+- [ ] **NLP trend detection** : sentiment analysis on luxury press and social media to anticipate collection directions
 
 **Connect the tools**
 - [ ] Pull live ML insights directly inside the RAG chatbot mid-conversation
@@ -430,7 +428,7 @@ I built this project to demonstrate product thinking applied to AI tooling, from
 
 Fascinated by new technologies and AI, I bring a hybrid background in law and business, enriched by roles across account management, partnerships, marketing, and operations in tech organizations from startups to multinationals.
 
-My clear goal is to move into operational and strategic roles leading innovative, AI-driven projects. What motivates me most is shaping vision, structuring roadmaps, building solutions, and ensuring they create real impact — with adaptability and fast learning as my foundation.
+Based in Hong Kong, my clear goal is to move into operational and strategic roles leading innovative, AI-driven projects. What motivates me most is shaping vision, structuring roadmaps, building solutions, and ensuring they create real impact, with adaptability and fast learning as my foundation.
 
 📬 [LinkedIn](https://www.linkedin.com/in/leana-dardano/) · [Email](mailto:dardano.leana@email.com)
 
