@@ -252,21 +252,28 @@ The RAG chatbot retrieves what it knows. The ML suite learns patterns from data 
 | "Which clients are at risk of churning?" | ❌ | ✅ |
 | "Which collection will peak next quarter?" | ❌ | ✅ |
 
-### Model 1 — Client Segmentation (K-Means)
+### Model 1 — Client Segmentation (K-Means) ✅
 
-Groups 500 clients into behavioral clusters based on spending, collection affinity, nationality, purchase frequency, and occasion patterns.
+Groups 500 clients into 5 behavioral segments based on spending, 
+collection affinity, purchase frequency, and VIP tier.
 
-```
-Input  : total_spent, purchase_count, preferred_collections,
-         nationality, budget_range, vip_tier, age
-Output : behavioral segments
-         e.g. "High-value Asian collector"
-              "Young French self-gifter"
-              "Gulf biannual high-spender"
-Algo   : K-Means with StandardScaler normalization
-Why    : Unsupervised — no labels needed, interpretable clusters,
-         scales well with tabular data
-```
+**k=5** selected based on elbow curve inflection point and business logic.
+
+| Segment | Clients | Avg Spend | Dominant Collection | VIP Tier |
+|---------|---------|-----------|-------------------|----------|
+| The Elegant Gold | 173 (35%) | $57k | Hatching + Amazon | Gold |
+| The Identity Seekers | 142 (28%) | $47k | Eclipse | Gold |
+| The Platinum Collectors | 116 (23%) | $172k | Amazon + Hatching | Platinum |
+| The New Entrants | 43 (9%) | $9k | Hatching | Member |
+| The Diamond VIPs | 26 (5%) | $348k | Amazon + Vanta | Diamond |
+
+**Key insight :** age is nearly identical across all clusters (~43 years) — 
+spending level and collection affinity are the true behavioral drivers at LÉIA Paris. 
+This aligns with LÉIA's brand philosophy : identity over demographics.
+
+![Segmentation](segments_profile.png)
+
+
 
 ### Model 2 — Piece Recommendation (Content-Based + XGBoost)
 
