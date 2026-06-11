@@ -142,7 +142,7 @@ Eight documents structured into a queryable knowledge base:
 
 | Key Result | Target |
 |-----------|--------|
-| KR1 | Segment 500 clients into meaningful behavioral clusters using K-Means |
+| KR1 | Segment 500 clients into 5 meaningful behavioral clusters ✅  |
 | KR2 | Recommend the top 3 relevant pieces per client profile with >70% relevance score |
 | KR3 | Identify seasonal sales patterns and collection trends with time series modeling |
 
