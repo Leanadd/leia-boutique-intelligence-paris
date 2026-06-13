@@ -143,7 +143,7 @@ Eight documents structured into a queryable knowledge base:
 | Key Result | Target |
 |-----------|--------|
 | KR1 | Segment 500 clients into 5 meaningful behavioral clusters ✅  |
-| KR2 | Recommend the top 3 relevant pieces per client profile with >70% relevance score |
+| KR2 | Recommend top 3 pieces per client — 80% accuracy ✅ |
 | KR3 | Identify seasonal sales patterns and collection trends with time series modeling |
 
 ### 5. The Product Response
@@ -274,19 +274,40 @@ This aligns with LÉIA's brand philosophy : identity over demographics.
 ![Segmentation](segments_profile.png)
 
 
+### Model 2 — Piece Recommendation (Random Forest) ✅
 
-### Model 2 — Piece Recommendation (Content-Based + XGBoost)
+Recommends the top 3 pieces for a given client profile, 
+filtering out products already owned and above budget.
 
-Recommends the top 3 pieces for a given client profile, based on collection affinity, budget, nationality, and purchase history.
+**Results on test set (702 transactions) :**
 
-```
-Input  : client profile + purchase history + product catalog
-Output : top 3 recommended pieces not yet owned by the client
-Algo   : Content-Based Filtering → XGBoost classifier
-Why    : Content-Based works with limited data (500 clients);
-         XGBoost handles mixed tabular features and is interpretable
-         — advisors can explain why a piece was recommended
-```
+| Metric | Score |
+|--------|-------|
+| Accuracy | 80% |
+| Macro F1 | 0.82 |
+| Products predicted | 42 |
+
+**What works well :**
+- Vanta watches achieve perfect F1 (1.00) — watch buyers 
+  have a highly distinct profile
+- Identity Seekers receive Eclipse recommendations 
+  with high confidence (57-79%)
+- Budget constraints respected across all segments
+
+**Key insight :** ECL006 and ECL008 are the hardest to predict (F1 ~0.35) —
+their buyers are the most diverse, consistent with Eclipse's 
+*"beyond definition"* philosophy.
+Diamond VIP clients with 15+ purchases trigger a 
+**bespoke service alert** rather than a standard recommendation — 
+the catalog is nearly exhausted for them.
+
+**Example outputs :**
+
+| Client | Segment | Top recommendation | Score |
+|--------|---------|-------------------|-------|
+| Tomoko Yamaguchi | New Entrant | Identity Medallion Pendant | 79% |
+| Feng Liu | Identity Seeker | Unity Chain Necklace | 57% |
+| Mei Chen | Elegant Gold | Crown Spike Hair Dagger | 47% |
 
 ### Model 3 — Sales Trend Prediction (Prophet)
 
@@ -411,6 +432,11 @@ seaborn
 **Go mobile first**
 - [ ] **Mobile deployment** : package the chatbot into a cross‑platform app (React Native / Flutter) so advisors can access it directly on iOS & Android
 - [ ] **Push notifications** : alert advisors with client insights or ML scores in real time
+
+**Next iteration :**
+- [ ] Test XGBoost classifier — expected +3-5% accuracy gain
+- [ ] Hyperparameter tuning with GridSearchCV
+- [ ] A/B test Random Forest vs XGBoost on live recommendations
 
 **Improve the RAG**
 - [ ] **Conversation memory**: persist context within a session
