@@ -283,8 +283,8 @@ filtering out products already owned and above budget.
 
 | Metric | Score |
 |--------|-------|
-| Accuracy | 80% |
-| Macro F1 | 0.82 |
+| Accuracy | 78% |
+| Macro F1 | 0.79 |
 | Products predicted | 42 |
 
 **What works well :**
