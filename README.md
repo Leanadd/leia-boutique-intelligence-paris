@@ -309,6 +309,18 @@ the catalog is nearly exhausted for them.
 | Feng Liu | Identity Seeker | Unity Chain Necklace | 57% |
 | Mei Chen | Elegant Gold | Crown Spike Hair Dagger | 47% |
 
+**Cold Start solution for new clients :**
+Content-Based Filtering computes cosine similarity between 
+the client profile vector (budget, collection, pronouns) 
+and each product feature vector.
+New clients transition to the Random Forest engine 
+automatically as their purchase history builds.
+
+| Engine | When | Input |
+|--------|------|-------|
+| Content-Based | First visit, no history | Budget + collection + pronouns |
+| Random Forest | Returning client | Full purchase history + profile |
+
 ### Model 3 — Sales Trend Prediction (Prophet)
 
 Identifies seasonal patterns in collection sales and predicts performance for the coming months.
