@@ -1,0 +1,8 @@
+*.pkl
+clients_ml_ready.csv
+clients_preprocessed.csv
+clients_segmented.csv
+__pycache__/
+.venv/
+chroma_db/
+.env
