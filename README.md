@@ -62,7 +62,7 @@ An analysis of the operational reality of a Paris luxury boutique revealed three
 
 >Behind the scenes, office teams face the opposite problem: too much data, not enough signal. Sales figures sit in spreadsheets, client insights stay locked in advisors' heads, and decisions get made on instinct rather than evidence.
 
->The goal: give every persona the right information at the right moment, and replace instinct with intelligence.
+>The goal: give every persona the right information at the right moment, replace instinct with intelligence and turn past performance into future strategy.
 
 ### 3. Product Vision
 
@@ -144,7 +144,7 @@ Eight documents structured into a queryable knowledge base:
 |-----------|--------|
 | KR1 | Segment 500 clients into 5 meaningful behavioral clusters ✅  |
 | KR2 | Recommend top 3 pieces per client — 80% accuracy ✅ |
-| KR3 | Identify seasonal sales patterns and collection trends with time series modeling |
+| KR3 | Forecast 12-month purchase volume and identify collection-level, performance trends to inform next collection strategy ✅ |
 
 ### 5. The Product Response
 
@@ -321,18 +321,60 @@ automatically as their purchase history builds.
 | Content-Based | First visit, no history | Budget + collection + pronouns |
 | Random Forest | Returning client | Full purchase history + profile |
 
-### Model 3 — Sales Trend Prediction (Prophet)
+### Model 3 — Sales Trend Prediction (Prophet) 
 
-Identifies seasonal patterns in collection sales and predicts performance for the coming months.
+12-month purchase volume forecast to support collection planning,
+inventory decisions, and advisor staffing.
 
-```
-Input  : monthly transaction volume by collection (2022–2025)
-Output : trend forecasts + seasonal peaks
-         (Chinese New Year, Eid, Art Basel, Fashion Week...)
-Algo   : Facebook Prophet
-Why    : Designed for business time series, handles seasonality
-         and holiday effects natively, highly readable output
-```
+**Two business objectives :**
+1. **Anticipate peaks** : align staffing, inventory, and launches 
+   with seasonal demand
+2. **Identify what works and what doesn't** : surface underperforming 
+   collections and inform the next collection strategy
+
+**Data : 2020–2024 (60 months) → forecast : 2025**
+
+| Month | Predicted | Key driver |
+|-------|-----------|------------|
+| March | 143 | Paris Fashion Week ↑ |
+| October | 121 | Art Basel Paris ↑ |
+| December | 118 | Holiday gifting ↑ |
+| February | 110 | Chinese New Year ↑ |
+| August | 78 | Paris summer exodus ↓ |
+
+**Collection performance insights (2020–2024) :**
+
+| Collection | Trend | Signal | Strategic implication |
+|-----------|-------|--------|----------------------|
+| Hatching | ↑ Strong growth | Highest volume, consistent rise | Core collection, protect and expand |
+| Amazon | ↑ Growth | Solid, volatile peaks | Event-driven, align with Gulf/gala calendar |
+| Eclipse | ↑ Moderate growth | Steady, community-driven | Identity milestone purchases, nurture community |
+| Vanta | → Stable low | Lowest volume, niche | High margin but limited reach, consider new entry-level piece |
+
+**What this tells the product team :**
+- Hatching is the commercial backbone: any new collection 
+  should not cannibalize it
+- Vanta's low volume despite high margins suggests a positioning issue:
+  too niche or price barrier too high for the current client base
+- Eclipse's steady growth reflects LÉIA's community building: 
+  a collection that grows with its clients
+- Amazon's volatility suggests it is event-dependent: 
+  not a reliable everyday driver but powerful for key moments
+
+**Key business outputs :**
+- Plan advisor staffing around peak months (Mar, Oct, Dec)
+- Time collection launches before seasonal peaks
+- Prepare inventory and after-sales capacity in advance
+- Identify slow months (Aug, Nov) for training and maintenance
+
+**Note on collection-level forecast :**
+All four collections show similar forecast shapes, expected with 
+synthetic data generated with uniform temporal rules.
+In a real-world dataset, each collection would exhibit distinct 
+seasonal drivers (Vanta → Watches & Wonders, Amazon → Eid season, 
+Eclipse → Fashion Week) encoded as custom Prophet holidays.
+
+![Forecast](forecast_collections.png)
 
 ### Stack
 - **Segmentation:** `scikit-learn` KMeans, StandardScaler, PCA
