@@ -62,6 +62,8 @@ An analysis of the operational reality of a Paris luxury boutique revealed three
 
 >Behind the scenes, office teams face the opposite problem: too much data, not enough signal. Sales figures sit in spreadsheets, client insights stay locked in advisors' heads, and decisions get made on instinct rather than evidence.
 
+>And further upstream, the product team designs the next collection without knowing what truly resonated or why.
+
 >The goal: give every persona the right information at the right moment, replace instinct with intelligence and turn past performance into future strategy.
 
 ### 3. Product Vision
