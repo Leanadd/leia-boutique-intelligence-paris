@@ -21,8 +21,12 @@ inject_leia_style()
 load_dotenv(dotenv_path=Path(".") / ".env")
 
 # Hugging Face API configuration
-API_URL = "https://router.huggingface.co/v1/chat/completions"
-HEADERS = {"Authorization": f"Bearer {os.getenv('HUGGINGFACEHUB_API_TOKEN')}"}
+import streamlit as st
+
+HF_TOKEN = (
+    os.environ.get('HUGGINGFACEHUB_API_TOKEN') or 
+    st.secrets.get('HUGGINGFACEHUB_API_TOKEN', '')
+)
 
 # Initialize RAG system (cached to avoid reloading)
 @st.cache_resource
