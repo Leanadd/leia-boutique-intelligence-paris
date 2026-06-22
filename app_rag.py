@@ -375,6 +375,23 @@ for msg in st.session_state.messages:
     with st.chat_message(msg["role"], avatar=AVATARS[msg["role"]]):
         st.markdown(msg["content"])
 
+# Welcome message shown only once at the start
+if len(st.session_state.messages) == 0:
+    st.info("""
+    👋 **Bonjour, I'm LÉIA Assistant.**
+    
+    I'm a knowledge tool built for the teams of LÉIA, 
+    a Parisian luxury jewelry maison. I adapt my answers 
+    based on your role. Select it in the sidebar to get started. 
+    
+    **Here are a few things you can ask me :**
+    - 🛍️ *Boutique Advisor* → "Lucie is coming tomorrow, how do I prepare?"
+    - 📞 *Customer Service* → "A client's clasp broke after 18 months, what do we do?"
+    - 🎨 *Marketing* → "Write an Instagram caption for the Eclipse collection"
+    - 📈 *CRM* → "Give me an overview of our Diamond tier clients"
+    - 🔧 *Product Team* → "What materials are used in the Möbius Ring?"
+    """)
+
 # User input
 user_input = st.chat_input("Ask me anything about LÉIA products, clients, policies, or procedures...")
 
