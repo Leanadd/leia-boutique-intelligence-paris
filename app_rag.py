@@ -25,6 +25,9 @@ try:
 except:
     HF_TOKEN = os.environ.get('HUGGINGFACEHUB_API_TOKEN', '')
 
+API_URL = "https://router.huggingface.co/v1/chat/completions"
+HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
+
 # Initialize RAG system (cached to avoid reloading)
 @st.cache_resource
 def initialize_knowledge_base():
