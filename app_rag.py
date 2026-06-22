@@ -20,9 +20,6 @@ inject_leia_style()
 # Load environment variables
 load_dotenv(dotenv_path=Path(".") / ".env")
 
-# Hugging Face API configuration
-import streamlit as st
-
 try:
     HF_TOKEN = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 except:
