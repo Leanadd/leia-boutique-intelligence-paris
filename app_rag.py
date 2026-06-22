@@ -385,11 +385,11 @@ if len(st.session_state.messages) == 0:
     based on your role. Select it in the sidebar to get started. 
     
     **Here are a few things you can ask me :**
-    - 🛍️ *Boutique Advisor* → "Lucie is coming tomorrow, how do I prepare?"
-    - 📞 *Customer Service* → "A client's clasp broke after 18 months, what do we do?"
-    - 🎨 *Marketing* → "Write an Instagram caption for the Eclipse collection"
-    - 📈 *CRM* → "Give me an overview of our Diamond tier clients"
-    - 🔧 *Product Team* → "What materials are used in the Möbius Ring?"
+    - *Boutique Advisor* → "Lucie is coming tomorrow, how do I prepare?"
+    - *Customer Service* → "A client's clasp broke after 18 months, what do we do?"
+    - *Marketing* → "Write an Instagram caption for the Eclipse collection"
+    - *CRM* → "Give me an overview of our Diamond tier clients"
+    - *Product Team* → "What materials are used in the Möbius Ring?"
     """)
 
 # User input
