@@ -23,10 +23,10 @@ load_dotenv(dotenv_path=Path(".") / ".env")
 # Hugging Face API configuration
 import streamlit as st
 
-HF_TOKEN = (
-    os.environ.get('HUGGINGFACEHUB_API_TOKEN') or 
-    st.secrets.get('HUGGINGFACEHUB_API_TOKEN', '')
-)
+try:
+    HF_TOKEN = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
+except:
+    HF_TOKEN = os.environ.get('HUGGINGFACEHUB_API_TOKEN', '')
 
 # Initialize RAG system (cached to avoid reloading)
 @st.cache_resource
