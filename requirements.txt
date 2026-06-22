@@ -1,12 +1,15 @@
-streamlit # Sert à créer une application web
-langchain # le framework principal pour construire des applications basées sur des LLM
-chromadb # pour la gestion de la base de données vectorielle, le moteur de recherche du chatbot, indispensable pour un RAG
-sentence-transformers # pour les embeddings, transformer les textes en vecteurs, ce qui permet au chatbot de comprendre le sens des phrases.
-transformers # librairie de Hugging Face pour utiliser des modèles de langage avancés
-python-dotenv # sert à stocker les clés API dans un fichier, coffre fort 
-langchain-huggingface
-langchain-community
-pandas
-plotly
-numpy==1.26.4
-requests
+streamlit==1.57.0
+requests==2.34.2
+python-dotenv==1.2.2
+pandas==3.0.3
+langchain==1.3.1
+langchain-community==0.4.2
+langchain-core==1.4.0
+langchain-huggingface==1.2.2
+langchain-text-splitters==1.1.2
+langchain-classic==1.0.7
+chromadb==1.5.9
+sentence-transformers==2.7.0
+transformers==4.40.0
+torch==2.2.2
+huggingface_hub==0.36.2
