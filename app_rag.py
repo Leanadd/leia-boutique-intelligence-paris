@@ -31,7 +31,10 @@ HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 # Initialize RAG system (cached to avoid reloading)
 @st.cache_resource
 def initialize_knowledge_base():
-    """Initialize the LÉIA knowledge base (runs once)"""
+    # clear chroma_db cache to force fresh reload
+    import shutil
+    if os.path.exists("./chroma_db"):
+        shutil.rmtree("./chroma_db")
     kb = LEIAKnowledgeBase()
     if kb.initialize():
         return kb
