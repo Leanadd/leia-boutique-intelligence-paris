@@ -13,6 +13,12 @@ AI-powered intelligence suite for a luxury jewelry maison: RAG chatbot, analytic
 
 ---
 
+## 🚀 Live Demo
+
+👉 **[Try LÉIA Assistant](https://leia-intelligence.streamlit.app)**
+
+> Select a persona in the sidebar and start exploring.
+
 ## Context
 
 LÉIA is a fictional Parisian luxury jewelry maison. 
