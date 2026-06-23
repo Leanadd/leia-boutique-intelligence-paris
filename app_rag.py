@@ -88,17 +88,62 @@ Format for clients: Name | Tier | Preferences | Last purchase (4 lines)
 Format for comparisons: Bullet points with key differences
 
 2. CLIENTELING / OUTREACH QUESTION  
-→ When advisor mentions a client name or upcoming visit:
-   - Retrieve client's purchase history and preferences from knowledge base
-   - If client is not found in the knowledge base, say: 
-     "I don't have any data on this client."
-   - If client is found, suggest a short personalized message 
-     or preparation notes based strictly on available data
-   - Flag upcoming occasions if birthdate is in knowledge base 
-     (birthday within 30 days → mention it)        
+→When an advisor mentions a client name or upcoming visit,
+IMMEDIATELY search the context for that client and respond with:
+
+FOUND → Output exactly this format :
+
+[First name Last name] | [VIP Tier] | [Style] | [Budget]
+Already owns : [list from notable_purchases]
+Birthday : [date — flag if within 30 days]
+
+Recommended pieces : [2-3 specific pieces with price, not in notable_purchases,
+aligned with her style and budget]
+
+Conversation opener : [one personalized sentence referencing their history]
+
+Boutique experience : [ONLY if no Chrysalis Room or Constellation Wall 
+mention in client notes — suggest ONE of the two innovations 
+that fits this client's profile and the occasion:
+→ Chrysalis Room : for clients going through a transition, 
+  milestone, or emotional moment
+→ Constellation Wall : for clients who are collectors 
+  or community-oriented
+If the client has already experienced these, skip this section.]
+
+NOT FOUND → "I don't have any data on [name] in the knowledge base."
+
+DO NOT describe what you will do. DO NOT list steps.
+Just search the context and output the result immediately.
    - Tone: warm, on-brand, never transactional
-→ Example: "Sophie arrives tomorrow, how do I prepare?" 
-   → client profile summary + occasion flag + product suggestion
+   
+→ Example: "Lucie arrives tomorrow, how do I prepare?" 
+     [Client Name] | [VIP Tier] | [Style] | [Budget]
+     Already owns : [piece 1 ($price)], [piece 2 ($price)]
+     Birthday : [date — flag if within 30 days]
+     Recommended pieces :
+     ① [Piece name] ($price) — [why it fits her style]
+     ② [Piece name] ($price) — [why it fits, note if slightly above budget]
+     ③ [Piece name] ($price) — [why it's the natural next step]
+     Conversation opener : "[Personalized sentence referencing a specific piece she owns]"
+     Boutique experience : [Chrysalis Room or Constellation Wall suggestion 
+     if not already experienced — one sentence max]
+     
+     * Conversation opener must reference something specific about her purchase history, never generic
+     BAD  : "we have new pieces you might like"
+     GOOD : "Your Feather Touch Ring is such a signature piece we just received its natural companion..."
+
+CRITICAL : NEVER invent product names.
+Only recommend pieces that exist in the LÉIA knowledge base.
+
+* If no piece fits exactly within budget, suggest the closest option 
+  slightly above (max +30%) with a justification :
+  never lead with the price — lead with why this piece is worth it
+  BAD  : "This one is $9,500, slightly above your budget"
+  GOOD : "The Chrysalis Locket captures everything that makes 
+          your style unique — it's a piece that grows with you. 
+          It sits just above your usual range at $9,500, 
+          but many clients find it becomes their most-worn piece."
 
 3. AFTER-SALES / POLICY QUESTION                  
 → Care instructions, warranty, repair timelines, return policy
@@ -385,7 +430,7 @@ if len(st.session_state.messages) == 0:
     based on your role. Select it in the sidebar to get started. 
     
     **Here are a few things you can ask me :**
-    - *Boutique Advisor* → "Lucie is coming tomorrow, how do I prepare?"
+    - *Boutique Advisor* → "Noura is coming today, how do I prepare?"
     - *Customer Service* → "A client's clasp broke after 18 months, what do we do?"
     - *Marketing* → "Write an Instagram caption for the Eclipse collection"
     - *CRM* → "Give me an overview of our Diamond tier clients"
