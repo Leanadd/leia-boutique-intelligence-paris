@@ -195,12 +195,11 @@ Notes: {row['advisor_notes']}
             model_name="sentence-transformers/all-mpnet-base-v2"  # Meilleur modèle
             )
         
-        # Create vector store
-        self.vectorstore = Chroma.from_documents(
-            documents=self.documents,
-            embedding=self.embeddings,
-            persist_directory="./chroma_db"
-        )
+        # without persist_directory 
+    self.vectorstore = Chroma.from_documents(
+        documents=self.documents,
+        embedding=self.embeddings,
+    )
         
         print("   ✅ Embeddings created and stored")
     
