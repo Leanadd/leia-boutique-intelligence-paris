@@ -196,10 +196,10 @@ Notes: {row['advisor_notes']}
             )
         
         # without persist_directory 
-    self.vectorstore = Chroma.from_documents(
-        documents=self.documents,
-        embedding=self.embeddings,
-    )
+        self.vectorstore = Chroma.from_documents(
+            documents=self.documents,
+            embedding=self.embeddings,
+        )
         
         print("   ✅ Embeddings created and stored")
     
