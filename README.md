@@ -523,7 +523,7 @@ I built this project to demonstrate product thinking applied to AI tooling, from
 
 Fascinated by new technologies and AI, I bring a hybrid background in law and business, enriched by roles across account management, partnerships, marketing, and operations in tech organizations from startups to multinationals.
 
-Based in Hong Kong, my clear goal is to move into operational and strategic roles leading innovative, AI-driven projects. What motivates me most is shaping vision, structuring roadmaps, building solutions, and ensuring they create real impact, with adaptability and fast learning as my foundation.
+My clear goal is to move into operational and strategic roles leading innovative, AI-driven projects. What motivates me most is shaping vision, structuring roadmaps, building solutions, and ensuring they create real impact, with adaptability and fast learning as my foundation.
 
 📬 [LinkedIn](https://www.linkedin.com/in/leana-dardano/) · [Email](mailto:dardano.leana@email.com)
 
